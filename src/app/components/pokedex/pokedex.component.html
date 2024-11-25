@@ -1,0 +1,10 @@
+<div class="flex flex-col items-center">
+    <div class="w-4/5 my-5 py-5 flex justify-center bg-white font-semibold text-4xl rounded-2xl">I Gen Pokedex</div>
+    <ul class="w-4/5 grid grid-cols-4">
+        <li *ngFor="let poke of pokemons; let i = index">
+            <a [routerLink]="['/pokemon', i + 1]" class=" hover:underline hover:font-semibold">
+                > {{ poke.name | titlecase}}
+            </a>
+        </li>
+    </ul>
+</div>

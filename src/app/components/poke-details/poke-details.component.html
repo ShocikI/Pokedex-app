@@ -1,0 +1,14 @@
+<div *ngIf="pokemon" class="flex flex-col items-center">
+    <a routerLink="/" class="w-2/5 my-5 py-5 flex justify-center bg-white font-semibold text-4xl rounded-2xl underline">
+        I Gen Pokedex
+    </a>
+    <div class="grid grid-cols-2 gap-4 place-content-between">
+        <div>
+            <h1 class="font-semibold text-2xl mb-1 mt-2">{{ pokemon.name | titlecase }}</h1>
+            <h1 class="text-xl">Types: {{ pokemon.types }}</h1>
+            <h1 class="text-xl">Overall: {{ pokemon.stats }}</h1>
+            <h1 class="text-xl">Weight: {{ pokemon.weight }}</h1>
+            <h1 class="text-xl">Height: {{ pokemon.height }}</h1>
+        </div>
+        <img [src]="pokemon.sprite" alt="{{pokemon.name}}" class="w-full">
+    </div>
