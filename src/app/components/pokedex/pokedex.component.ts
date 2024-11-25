@@ -19,7 +19,6 @@ export class PokedexComponent implements OnInit {
   ngOnInit(): void {
     this.pokeDataService.getPokemonList().subscribe((data: any) => {
       this.pokemons = data.results
-      console.log(this.pokemons)
     })
   }
 }
